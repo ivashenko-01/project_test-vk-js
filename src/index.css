@@ -1,0 +1,213 @@
+:root {
+    /* -- =============== COLORS =============== -- */
+    --body-font: "Raleway", sans-serif;
+
+    --body-font-size: 1rem;
+
+    --h1-font-size: 64px;
+    --h2-font-size: 48px;
+    --h3-font-size: 36px;
+    --h4-font-size: 32px;
+    --h5-font-size: 24px;
+    --h6-font-size: 20px;
+
+    --h1-min-font-size: 24px;
+    --h2-min-font-size: 24px;
+    --h3-min-font-size: 20px;
+    --h4-min-font-size: 16px;
+    --h5-min-font-size: 14px;
+    --h6-min-font-size: 12px;
+
+    --h1-font-weight: 700;
+    --h2-font-weight: 700;
+    --h3-font-weight: 700;
+    --h4-font-weight: 700;
+    --h5-font-weight: 700;
+    --h6-font-weight: 700;
+
+    --text-font-size: 16px;
+    --description-font-size: 14px;
+
+    --button-font-size: 16px;
+
+    --avatar-size: 100px;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-color);
+}
+
+h1 {
+    font-size: clamp(var(--h1-min-font-size), 4vw, var(--h1-font-size));
+    font-weight: var(--h1-font-weight);
+}
+
+h2 {
+    font-size: clamp(var(--h2-min-font-size), 4vw, var(--h2-font-size));
+    font-weight: var(--h2-font-weight);
+}
+
+h3 {
+    font-size: clamp(var(--h3-min-font-size), 4vw, var(--h3-font-size));
+    font-weight: var(--h3-font-weight);
+}
+
+h4 {
+    font-size: clamp(var(--h4-min-font-size), 4vw, var(--h4-font-size));
+    font-weight: var(--h4-font-weight);
+}
+
+h5 {
+    font-size: clamp(var(--h5-min-font-size), 4vw, var(--h5-font-size));
+    font-weight: var(--h5-font-weight);
+}
+
+h6 {
+    font-size: clamp(var(--h6-min-font-size), 4vw, var(--h6-font-size));
+    font-weight: var(--h6-font-weight);
+}
+
+p {
+    color: var(--text-color);
+    font-size: var(--text-font-size);
+}
+
+.list-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.list-group .list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 800px;
+
+    background-color: aqua;
+    padding: 20px;
+
+    min-height: 120px;
+}
+
+.list-group .list-item__content {
+    position: absolute;
+    left: 130px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.list-group .list-item__members {
+    display: flex;
+    gap: 0.3vw;
+}
+
+.list-group .group-image {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.list-group .list-item__friend {
+    position: relative;
+}
+
+.list-friend {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+
+    background-color: white;
+    padding: 10px;
+
+    width: max-content;
+}
+
+.list-friend .list-item__friend {
+    padding: 3px;
+}
+
+.list-friend .list-item__friend:hover {
+    background-color: aqua;
+}
+
+.select-items {
+    display: flex;
+    gap: 1vw;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.select-box {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+}
+
+.select-items__list {
+    z-index: 999;
+    /* display: none; */
+    background-color: white;
+}
+
+.select-items__list.active {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+}
+
+.select-item__list {
+    border: 1px solid #e6e6e6;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.select-item__list:hover {
+    background-color: rgba(82, 192, 152, 0.25);
+}
+
+.button-select {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    padding: 15px 25px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+}
